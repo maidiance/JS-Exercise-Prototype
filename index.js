@@ -56,19 +56,19 @@ Person.prototype.toString = function(){
   return `${this.name}, ${this.age}`;
 }
 
-const kyler = new Person('Kyler', 25);
-const ben = new Person('Bennet', 28);
-console.log(kyler.toString());
-console.log(ben.toString());
-ben.eat('pizza');
-ben.eat('tacos');
-ben.eat('sushi');
-ben.eat('ramen');
-ben.eat('sandwich');
-ben.eat('cake');
-console.log(ben.stomach);
-ben.poop();
-console.log(ben.stomach);
+// const kyler = new Person('Kyler', 25);
+// const ben = new Person('Bennet', 28);
+// console.log(kyler.toString());
+// console.log(ben.toString());
+// ben.eat('pizza');
+// ben.eat('tacos');
+// ben.eat('sushi');
+// ben.eat('ramen');
+// ben.eat('sandwich');
+// ben.eat('cake');
+// console.log(ben.stomach);
+// ben.poop();
+// console.log(ben.stomach);
 
 /*
   TASK 2
@@ -84,10 +84,15 @@ console.log(ben.stomach);
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-  
+function Car(model, milesPerGallon) {
+  this.model = model;
+  this.milesPerGallon = milesPerGallon;
+  this.tank = 0;
+  this.odometer = 0;
 }
-
+Car.prototype.fill = function(gallons){
+  this.tank += gallons;
+}
 
 /*
   TASK 3
