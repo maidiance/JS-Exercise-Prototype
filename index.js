@@ -114,10 +114,10 @@ Baby.prototype.play = function(){
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Explicit binding: we need to .call(), .apply(), or .bind() the this keyword explicitly.
+  2. Implicit binding: mostly applying to objects with methods, we look to the left of the dot operator to see what this is referring to.
+  3. Window binding: something to avoid, when we don't have something else, this will default to the window object, unless we are in strict mode where it will return undefined.
+  4. Object binding: when we use the new keyword for creating objects, the this keyword points to the newly reated object.
 */
 
 
